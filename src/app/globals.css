@@ -17,3 +17,16 @@
 .green {
   background: green !important;
 }
+
+/* 테일윈드 간편 속성 */
+@layer components {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .flex-start {
+    @apply flex items-start justify-start;
+  }
+  .flex-between {
+    @apply flex justify-between;
+  }
+}
