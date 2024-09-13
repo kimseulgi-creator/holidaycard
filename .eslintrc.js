@@ -50,6 +50,8 @@ module.exports = {
     "jsx-a11y",
     // Prettier 플러그인
     "prettier",
+    // Unused imports 플러그인
+    "unused-imports",
   ],
   rules: {
     // Prettier 규칙을 ESLint 오류로 설정
@@ -76,5 +78,17 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     // any 타입 사용을 허용
     "@typescript-eslint/no-explicit-any": "off",
+    // 사용되지 않는 import 구문을 제거
+    "unused-imports/no-unused-imports": "error",
+    // 사용되지 않는 변수와 함수는 경고로 설정
+    "no-unused-vars": [
+      "warn",
+      {
+        vars: "all",
+        varsIgnorePattern: "^_",
+        args: "after-used",
+        argsIgnorePattern: "^_",
+      },
+    ],
   },
 };
